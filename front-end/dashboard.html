@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📊 Dashboard - Estação Meteorológica</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Botão Hamburguer -->
+  <div class="menu-btn" id="menu-btn">☰</div>
+
+  <!-- Menu Lateral -->
+  <nav class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html">🏠 Início</a></li>
+      <li><a href="dashboard.html">📊 Dashboard</a></li>
+      <li><a href="#">ℹ️ Sobre</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- GRID PRINCIPAL -->
+  <div class="dashboard-grid">
+    <!-- Coluna 1 -->
+    <main class="content">
+      <h1>📈 Dashboard de Histórico</h1>
+      <p>Visualize os dados históricos por intervalo de datas</p>
+
+      <div class="controls">
+        <div class="toggles">
+          <label class="switch">
+            <input type="checkbox" id="toggle-temp" checked>
+            <span class="slider"></span> Temperatura 🌡️
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="toggle-hum">
+            <span class="slider"></span> Umidade 💧
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="toggle-press">
+            <span class="slider"></span> Pressão ⚖️
+          </label>
+        </div>
+
+        <div class="date-range">
+          <label>De: <input type="date" id="data-inicio"></label>
+          <label>Até: <input type="date" id="data-fim"></label>
+          <button id="btn-aplicar">Aplicar</button>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="dashboard-chart"></canvas>
+      </div>
+    </main>
+
+    <!-- Coluna 2 -->
+    <div class="side-panel">
+      <div class="panel-card">
+        <div class="panel-title">📊 Histórico Completo Diário</div>
+        <canvas id="indicador1-chart"></canvas>
+      </div>
+      <div class="panel-card">
+        <div class="panel-title">📊 Variação Diária</div>
+        <canvas id="indicador2-var-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Coluna 3 -->
+    <div class="side-panel">
+      <div class="panel-card">
+        <div class="panel-title">🌡️ Tendência de Temperatura Diária</div>
+        <canvas id="indicador2-chart"></canvas>
+      </div>
+      <div class="panel-card maximos-card">
+        <div class="panel-title" style="font-size: 16px;">📊 Valores Máximos Diários</div>
+        <div class="maximo-item indicadorTemperatura"></div>
+        <div class="maximo-item indicadorUmidade"></div>
+        <div id="indicadorPressao" class="maximo-item indicadorPressao"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

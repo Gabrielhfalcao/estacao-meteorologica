@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estação Meteorológica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Botão Hamburguer -->
+  <div class="menu-btn" id="menu-btn">☰</div>
+
+  <!-- Menu Lateral -->
+  <nav class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="dashboard.html">📊 Dashboard</a></li>
+      <li><a href="#">🌡️ Histórico</a></li>
+      <li><a href="#">ℹ️ Sobre</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay compartilhado -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Conteúdo principal -->
+  <main class="content">
+    <h1>🌤 Estação Meteorológica</h1>
+    <h4>Indicadores em tempo real</h4>
+    <div class="dashboard">
+      <div class="card" data-modal="modal-temp">
+        <div class="icon">🌡️</div>
+        <div class="value" id="temp">27.3 °C</div>
+        <div class="label">Temperatura</div>
+      </div>
+      <div class="card" data-modal="modal-hum">
+        <div class="icon">💧</div>
+        <div class="value" id="hum">61 %</div>
+        <div class="label">Umidade</div>
+      </div>
+      <div class="card" data-modal="modal-press">
+        <div class="icon">⚖️</div>
+        <div class="value" id="press">1013 hPa</div>
+        <div class="label">Pressão</div>
+      </div>
+      <div class="card">
+        <div class="icon">⛰️</div>
+        <div class="value" id="alt">21 m</div>
+        <div class="label">Altitude</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Temperatura -->
+  <div class="modal" id="modal-temp">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>🌡️ Histórico Diário de Temperatura</h2>
+      <canvas id="chart-temp"></canvas>
+    </div>
+  </div>
+
+  <!-- Modal Umidade -->
+  <div class="modal" id="modal-hum">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>💧 Histórico Diário de Umidade</h2>
+      <canvas id="chart-hum"></canvas>
+    </div>
+  </div>
+
+  <!-- Modal Pressão -->
+  <div class="modal" id="modal-press">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>⚖️ Histórico Diário de Pressão</h2>
+      <canvas id="chart-press"></canvas>
+    </div>
+  </div>
+
+  <!-- Importando Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

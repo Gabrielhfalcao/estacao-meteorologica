@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  padding: 30px;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.side-panel {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.panel-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1.3rem;
+  transition: transform 0.3s, background 0.3s;
+  position: relative;
+  padding: 40px;
+}
+
+.panel-title {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  z-index: 10;
+}
+
+.panel-card canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.toggles {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.date-range {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.date-range input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.date-range button {
+  background: rgba(237, 237, 237, 0.082);
+  border: none;
+  padding: 7px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 20px;
+  height: 30px;
+}
+
+.date-range button:hover {
+  background: #1e90ff;
+}
+
+.date-range input{
+  border-radius: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 20px;
+  padding-left: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #638cb6;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.chart-container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+
+/* ====== Estilo dos cards de valores máximos ====== */
+.panel-card.maximos-card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.panel-card.maximos-card .panel-title {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Itens máximos centralizados */
+.maximo-item {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+  height: 33%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 0.0001px solid rgba(118, 118, 118, 0.3);
+}
+
+#indicadorPressao {
+  border-bottom: none;
+}
+
+.maximo-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}

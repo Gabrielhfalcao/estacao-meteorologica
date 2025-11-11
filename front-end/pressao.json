@@ -1,0 +1,9 @@
+[
+    { "id": 1, "pressao": 1010, "timestamp": 1696050000000 },
+    { "id": 2, "pressao": 1012, "timestamp": 1696053600000 },
+    { "id": 3, "pressao": 1013, "timestamp": 1696057200000 },
+    { "id": 4, "pressao": 1015, "timestamp": 1696060800000 },
+    { "id": 5, "pressao": 1014, "timestamp": 1696064400000 },
+    { "id": 6, "pressao": 1013, "timestamp": 1696068000000 }
+  ]
+  

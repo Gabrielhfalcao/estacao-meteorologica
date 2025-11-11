@@ -1,0 +1,9 @@
+[
+    { "id": 1, "umidade": 55, "timestamp": 1696050000000 },
+    { "id": 2, "umidade": 58, "timestamp": 1696053600000 },
+    { "id": 3, "umidade": 60, "timestamp": 1696057200000 },
+    { "id": 4, "umidade": 62, "timestamp": 1696060800000 },
+    { "id": 5, "umidade": 59, "timestamp": 1696064400000 },
+    { "id": 6, "umidade": 57, "timestamp": 1696068000000 }
+  ]
+  
