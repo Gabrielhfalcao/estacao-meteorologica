@@ -8,5 +8,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"/>
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chart.js_logo.svg/1024px-Chart.js_logo.svg.png"/>
+
 
 <img width="250" height="250" alt="1" src="https://github.com/user-attachments/assets/f6b290a0-8f95-42e0-a850-8bffb285bfe9" />
