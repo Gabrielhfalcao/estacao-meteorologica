@@ -1,6 +1,6 @@
 <h1>Tecnologias envolvidas</h1> 
 
-<div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 800px;">
   <img src="https://upload.wikimedia.org/wikipedia/pt/3/30/Java_programming_language_logo.svg" height="200"/> 
   <img src="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/spring-boot-logo-icon.png" height="200"/> 
   <img src="https://www.vincenzoracca.com/images/framework/jpa/jpa3.jpg" height="200"/> 
